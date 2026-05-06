@@ -57,7 +57,7 @@ const Modal = ({ node, lang, isOpen, onClose }: { node: MindmapNode | null, lang
               </div>
             </div>
             <div className="mt-8 pt-4 border-t border-black/10 text-[10px] uppercase font-bold text-black/40 text-center">
-              © {NEWSPAPER_CONFIG.header[lang]} - Resolution 79 Special Issue
+              © {NEWSPAPER_CONFIG.header[lang]} - {lang === 'vi' ? 'Ấn bản đặc biệt Nghị quyết 79' : 'Resolution 79 Special Issue'}
             </div>
           </motion.div>
         </div>
@@ -92,7 +92,7 @@ const Header = ({ lang, setLang }: { lang: Language; setLang: (l: Language) => v
       <header className="max-w-7xl mx-auto px-4 md:px-8 pt-8">
         <div className="flex flex-col md:flex-row justify-between items-end border-b-2 border-black pb-2 mb-1">
           <div className="hidden md:block w-64 text-[10px] font-bold leading-tight">
-            <p>{NEWSPAPER_CONFIG.subHeader[lang]}</p>
+            <p className="whitespace-pre-line">{NEWSPAPER_CONFIG.subHeader[lang]}</p>
             <p className="mt-2 text-news-red">{NEWSPAPER_CONFIG.meta.founded}</p>
           </div>
           
@@ -242,7 +242,7 @@ const MainStory = ({ lang, onReadMore }: { lang: Language, onReadMore: (node: Mi
             ))}
           </div>
           <button onClick={() => onReadMore(mainNode)} className="bg-black text-white text-[10px] font-black px-4 py-2 hover:bg-news-red transition-colors flex items-center gap-2">
-            XEM CHI TIẾT NGHỊ QUYẾT <ArrowRight size={14} />
+            {lang === 'vi' ? 'XEM CHI TIẾT NGHỊ QUYẾT' : 'VIEW RESOLUTION DETAILS'} <ArrowRight size={14} />
           </button>
         </div>
         
@@ -322,11 +322,11 @@ export default function App() {
                   {lang === 'vi' ? 'CHỈ SỐ TĂNG TRƯỞNG' : 'GROWTH INDEX'}
                 </div>
                 {[
-                  { label: 'Mục tiêu GDP 2030', value: '7.0%' },
-                  { label: 'Tỷ lệ Cải cách', value: '98.5%' },
-                  { label: 'Doanh nghiệp SE Asia', value: '50' },
-                  { label: 'Vốn DNNN', value: '$1.2T' },
-                  { label: 'Top 500 Thế giới', value: '1-3' },
+                  { label: lang === 'vi' ? 'Mục tiêu GDP 2030' : '2030 GDP Target', value: '7.0%' },
+                  { label: lang === 'vi' ? 'Tỷ lệ Cải cách' : 'Reform Rate', value: '98.5%' },
+                  { label: lang === 'vi' ? 'Doanh nghiệp SE Asia' : 'SE Asia SOEs', value: '50' },
+                  { label: lang === 'vi' ? 'Vốn DNNN' : 'State Capital', value: '$1.2T' },
+                  { label: lang === 'vi' ? 'Top 500 Thế giới' : 'Global Top 500', value: '1-3' },
                 ].map((stat, i) => (
                   <div key={i} className="flex justify-between items-end mb-8 border-b border-black/10 pb-2">
                     <span className="text-[10px] font-black uppercase text-black/60 leading-none">{stat.label}</span>

@@ -158,7 +158,7 @@ export const MINDMAP_DATA: MindmapNode[] = [
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
     caption: {
       vi: 'Kết quả ban đầu cho thấy sự phục hồi rõ rệt của DNNN.',
-      en: 'Initial results show visible recovery ofSOEs.'
+      en: 'Initial results show visible recovery of SOEs.'
     },
     position: { x: 85, y: 70 }
   }
@@ -166,11 +166,11 @@ export const MINDMAP_DATA: MindmapNode[] = [
 
 export const NEWSPAPER_CONFIG = {
   header: {
-    vi: 'KINH TẾ CHÍNH TRỊ MAC-LENIN',
+    vi: 'KINH TẾ CHÍNH TRỊ MÁC-LÊNIN',
     en: 'MARXISM-LENINISM POLITICAL ECONOMY'
   },
   subHeader: {
-    vi: 'Môn học: Kinh tế Chính trị Mac-Lenin \nTrường: Đại học Giao thông Vận tải TP.HCM',
+    vi: 'Môn học: Kinh tế Chính trị Mác-Lênin \nTrường: Đại học Giao thông Vận tải TP.HCM',
     en: 'Subject: Marxism-Leninism Political Economy \nUniversity: University of Transport HCMC'
   },
   tagline: {
