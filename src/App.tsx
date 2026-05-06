@@ -93,7 +93,7 @@ const Header = ({ lang, setLang }: { lang: Language; setLang: (l: Language) => v
         <div className="flex flex-col md:flex-row justify-between items-end border-b-2 border-black pb-2 mb-1">
           <div className="hidden md:block w-64 text-[10px] font-bold leading-tight">
             <p className="whitespace-pre-line">{NEWSPAPER_CONFIG.subHeader[lang]}</p>
-            <p className="mt-2 text-news-red">{NEWSPAPER_CONFIG.meta.founded}</p>
+            <p className="mt-2 text-news-red">{NEWSPAPER_CONFIG.meta.founded[lang]}</p>
           </div>
           
           <div className="flex-1 text-center py-4 md:py-8">
@@ -108,7 +108,7 @@ const Header = ({ lang, setLang }: { lang: Language; setLang: (l: Language) => v
 
           <div className="hidden md:block w-64 text-right text-[10px] font-bold">
             <p>{date}</p>
-            <p className="mt-1">{NEWSPAPER_CONFIG.meta.issue}</p>
+            <p className="mt-1">{NEWSPAPER_CONFIG.meta.issue[lang]}</p>
             <p className="mt-1 text-news-red uppercase">{NEWSPAPER_CONFIG.meta.url}</p>
           </div>
         </div>
@@ -168,7 +168,7 @@ const Header = ({ lang, setLang }: { lang: Language; setLang: (l: Language) => v
           {NEWSPAPER_CONFIG.headline[lang]}
         </h2>
         <div className="flex items-center gap-4 text-sm text-black/60 mb-8 border-b border-black/10 w-full pb-4 italic">
-          <span>{NEWSPAPER_CONFIG.meta.issue}</span>
+          <span>{NEWSPAPER_CONFIG.meta.issue[lang]}</span>
         </div>
         
         <div className="bg-white/50 p-6 border-l-4 border-news-red mb-12 italic text-lg leading-relaxed">

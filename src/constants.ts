@@ -58,7 +58,7 @@ export const MINDMAP_DATA: MindmapNode[] = [
         'Institutions and policies: Ensuring fair competition across sectors (SOE, private, FDI); applying transparent market mechanisms in bidding.'
       ]
     },
-    image: 'https://images.unsplash.com/photo-1507679799987-c7377f323bc2?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800',
     caption: {
       vi: 'Thay đổi tư duy là yếu tố then chốt cho sự bứt phá.',
       en: 'Mindset change is key to breakthrough.'
@@ -155,7 +155,7 @@ export const MINDMAP_DATA: MindmapNode[] = [
         'Practice: Tax extensions, loan support, and administrative reform are helping businesses recover strongly.'
       ]
     },
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
     caption: {
       vi: 'Kết quả ban đầu cho thấy sự phục hồi rõ rệt của DNNN.',
       en: 'Initial results show visible recovery of SOEs.'
@@ -182,8 +182,14 @@ export const NEWSPAPER_CONFIG = {
     en: 'Politburo Resolution 79-NQ/TW on State Economic Development'
   },
   meta: {
-    issue: 'Cập nhật 12:08 05/05/2026',
-    founded: 'Xuất bản định kỳ từ 2026',
+    issue: {
+      vi: 'Cập nhật 12:08 05/05/2026',
+      en: 'Updated 12:08 05/05/2026'
+    },
+    founded: {
+      vi: 'Xuất bản định kỳ từ 2026',
+      en: 'Published periodically since 2026'
+    },
     url: 'KTCTUTH.VN'
   }
 };
