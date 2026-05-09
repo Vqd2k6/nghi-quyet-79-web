@@ -214,7 +214,7 @@ const SidebarItem = ({ node, lang, onReadMore }: { node: MindmapNode, lang: Lang
 
 const MainStory = ({ lang, onReadMore }: { lang: Language, onReadMore: (node: MindmapNode) => void }) => {
   const mainNode = MINDMAP_DATA[2]; // Objectives as main
-  const secondaryNode = MINDMAP_DATA[0]; // Context
+  const secondaryNode = MINDMAP_DATA[5]; // Solutions
   
   return (
     <motion.div 

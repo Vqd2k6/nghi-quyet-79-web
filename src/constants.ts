@@ -161,6 +161,37 @@ export const MINDMAP_DATA: MindmapNode[] = [
       en: 'Initial results show visible recovery of SOEs.'
     },
     position: { x: 85, y: 70 }
+  },
+  {
+    id: 'solutions',
+    title: {
+      vi: 'Nhiệm vụ Trọng tâm: Tái cơ cấu & Chuyển đổi số',
+      en: 'Key Tasks: Restructuring & Digital Transformation'
+    },
+    content: {
+      vi: 'Tập trung cơ cấu lại các tập đoàn kinh tế, tổng công ty nhà nước; đẩy mạnh ứng dụng công nghệ số và đổi mới sáng tạo để nâng cao năng lực cạnh tranh cốt lõi.',
+      en: 'Focusing on restructuring economic groups and state corporations; promoting digital tech and innovation to enhance core competitiveness.'
+    },
+    fullContent: {
+      vi: [
+        'Cơ cấu lại doanh nghiệp: Sắp xếp, tinh gọn bộ máy; cổ phần hóa và thoái vốn nhà nước tại các doanh nghiệp không cần thiết nắm giữ.',
+        'Chuyển đổi số: Tiên phong ứng dụng công nghệ 4.0, AI và dữ liệu lớn vào quản trị và sản xuất.',
+        'Đầu tư trọng điểm: Dồn nguồn lực vào các dự án hạ tầng quy mô lớn, năng lượng tái tạo và công nghiệp bán dẫn.',
+        'Phát triển nguồn nhân lực: Đào tạo đội ngũ quản lý chuyên nghiệp, thu hút nhân tài và trả lương theo nguyên tắc thị trường.'
+      ],
+      en: [
+        'Enterprise restructuring: Streamlining apparatus; equitizing and divesting state capital in non-essential enterprises.',
+        'Digital transformation: Pioneering 4.0 tech, AI, and big data in governance and production.',
+        'Key investments: Funneling resources into large-scale infrastructure, renewable energy, and semiconductor industries.',
+        'Human resource development: Training professional managers, attracting talent, and paying market-based salaries.'
+      ]
+    },
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
+    caption: {
+      vi: 'Chuyển đổi số là chìa khóa nâng cao năng suất.',
+      en: 'Digital transformation is the key to productivity.'
+    },
+    position: { x: 50, y: 90 }
   }
 ];
 
