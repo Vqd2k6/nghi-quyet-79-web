@@ -225,3 +225,150 @@ export const NEWSPAPER_CONFIG = {
   }
 };
 
+export const CASE_STUDIES_DATA = [
+  {
+    id: 'vec',
+    name: 'VEC',
+    fullName: {
+      vi: 'Tổng công ty Đầu tư phát triển đường cao tốc Việt Nam',
+      en: 'Vietnam Expressway Corporation'
+    },
+    activity: {
+      vi: 'Đầu tư, vận hành hệ thống đường cao tốc',
+      en: 'Investing and operating the expressway system'
+    },
+    role: {
+      vi: 'Kết nối vùng, thúc đẩy phát triển kinh tế. Thể hiện vai trò dẫn dắt của kinh tế nhà nước trong hạ tầng.',
+      en: 'Regional connectivity, boosting economic development. Demonstrating the state economy\'s leading role in infrastructure.'
+    },
+    image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'evn',
+    name: 'EVN',
+    fullName: {
+      vi: 'Tập đoàn Điện lực Việt Nam',
+      en: 'Vietnam Electricity'
+    },
+    activity: {
+      vi: 'Bảo đảm cung ứng điện ổn định',
+      en: 'Ensuring stable electricity supply'
+    },
+    role: {
+      vi: 'Điều tiết giá điện, phục vụ sản xuất và đời sống. Thể hiện vai trò điều tiết các lĩnh vực thiết yếu.',
+      en: 'Regulating electricity prices, serving production and life. Demonstrating the regulatory role in essential sectors.'
+    },
+    image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: 'viettel',
+    name: 'Viettel',
+    fullName: {
+      vi: 'Tập đoàn Công nghiệp – Viễn thông Quân đội',
+      en: 'Military Industry and Telecoms Group'
+    },
+    activity: {
+      vi: 'Phát triển hạ tầng số, công nghệ 5G',
+      en: 'Developing digital infrastructure, 5G technology'
+    },
+    role: {
+      vi: 'Thúc đẩy chuyển đổi số quốc gia. Thể hiện vai trò tiên phong, đổi mới sáng tạo.',
+      en: 'Promoting national digital transformation. Demonstrating a pioneering, innovative role.'
+    },
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800'
+  }
+];
+
+export const EVALUATION_DATA = {
+  positives: {
+    title: {
+      vi: 'ĐIỂM SÁNG & THÀNH TỰU',
+      en: 'POSITIVES & ACHIEVEMENTS'
+    },
+    items: [
+      {
+        aspect: { vi: 'Về mặt lý luận', en: 'Theoretical aspect' },
+        desc: { 
+          vi: 'Bước tiến trong tư duy quản lý: định hình lại vai trò chủ đạo của KTNN theo hướng dẫn dắt, hiệu quả và năng lực cạnh tranh thay vì độc quyền hành chính.',
+          en: 'Advance in management thinking: reshaping the state economy\'s leading role towards guidance, efficiency, and competitiveness rather than administrative monopoly.'
+        }
+      },
+      {
+        aspect: { vi: 'Về mặt thể chế', en: 'Institutional aspect' },
+        desc: {
+          vi: 'Chuyển từ "Nhà nước can thiệp" sang "Nhà nước kiến tạo". Tạo "đường ray" thể chế, cải cách thủ tục, tạo môi trường cạnh tranh bình đẳng.',
+          en: 'Shifting from "Intervening State" to "Facilitating State". Creating institutional "rails", reforming procedures, fostering fair competition.'
+        }
+      },
+      {
+        aspect: { vi: 'Về kinh tế - xã hội', en: 'Socio-economic aspect' },
+        desc: {
+          vi: 'Giải quyết hài hòa lợi ích Nhà nước – Doanh nghiệp – Người lao động. Hỗ trợ doanh nghiệp trụ vững, duy trì việc làm để không ai bị bỏ lại phía sau.',
+          en: 'Harmonizing State-Business-Worker interests. Supporting enterprises to survive, maintaining jobs so no one is left behind.'
+        }
+      }
+    ]
+  },
+  challenges: {
+    title: {
+      vi: 'HẠN CHẾ & THÁCH THỨC',
+      en: 'LIMITATIONS & CHALLENGES'
+    },
+    items: [
+      {
+        aspect: { vi: 'Bất bình đẳng chính sách', en: 'Policy inequality' },
+        desc: {
+          vi: 'Dòng vốn mới chỉ "chảy" nhanh đến các DNNN/FDI quy mô lớn. Các doanh nghiệp SMEs (chiếm >90%) vẫn khó tiếp cận vốn và hoàn thuế.',
+          en: 'Capital flows mainly to large SOEs/FDI. SMEs (>90%) still struggle with credit access and tax refunds.'
+        }
+      },
+      {
+        aspect: { vi: 'Tâm lý sợ trách nhiệm', en: 'Fear of responsibility' },
+        desc: {
+          vi: 'Pháp luật (đất đai, đấu thầu, định giá) chồng chéo dẫn đến cán bộ e ngại rủi ro, làm chậm quá trình cổ phần hóa và thoái vốn.',
+          en: 'Overlapping laws cause risk-aversion among officials, slowing down equitization and divestment.'
+        }
+      },
+      {
+        aspect: { vi: 'Chất lượng tăng trưởng', en: 'Growth quality' },
+        desc: {
+          vi: 'Hàm lượng KHCN và năng suất nhân tố tổng hợp (TFP) của DNNN tăng chưa đạt kỳ vọng; hạ tầng số và kinh tế xanh chuyển biến chậm.',
+          en: 'Tech content and TFP of SOEs haven\'t met expectations; digital infra and green economy shift is slow.'
+        }
+      }
+    ]
+  },
+  solutions: {
+    title: {
+      vi: 'ĐỀ XUẤT GIẢI PHÁP',
+      en: 'PROPOSED SOLUTIONS'
+    },
+    items: [
+      {
+        aspect: { vi: 'Hoàn thiện thể chế', en: 'Institutional perfection' },
+        desc: {
+          vi: 'Luật hóa cơ chế bảo vệ cán bộ, nhà quản lý "dám nghĩ, dám làm, dám đột phá vì lợi ích chung". Phá băng pháp lý, đồng bộ luật Đất đai, Đấu thầu.',
+          en: 'Legalizing protection mechanisms for "daring to think, do, and breakthrough" officials. Synchronizing Land and Bidding laws.'
+        }
+      },
+      {
+        aspect: { vi: 'Định vị vai trò 4.0', en: 'Positioning in 4.0 era' },
+        desc: {
+          vi: 'DNNN tập trung vào các lĩnh vực then chốt mới: Công nghiệp bán dẫn (Chip), Năng lượng tái tạo và Chuyển đổi số quốc gia.',
+          en: 'SOEs focus on new key sectors: Semiconductor (Chips), Renewable Energy, and National Digital Transformation.'
+        }
+      },
+      {
+        aspect: { vi: 'Số hóa hỗ trợ SMEs', en: 'Digitizing SME support' },
+        desc: {
+          vi: 'Ứng dụng Big Data để tự động hóa xét duyệt hỗ trợ tín dụng/thuế. Xây dựng hệ sinh thái liên kết SMEs vào chuỗi cung ứng toàn cầu.',
+          en: 'Using Big Data to automate credit/tax support approvals. Building ecosystems linking SMEs to global supply chains.'
+        }
+      }
+    ]
+  },
+  conclusion: {
+    vi: 'Nghị quyết 79-NQ/TW là một văn kiện mang tính bước ngoặt. Nếu giải quyết triệt để các điểm nghẽn thể chế, kinh tế nhà nước sẽ thực sự trở thành "quả đấm thép", dẫn dắt nền kinh tế Việt Nam vươn mình trở thành quốc gia phát triển, thực hiện thành công khát vọng phồn vinh của dân tộc.',
+    en: 'Resolution 79-NQ/TW is a landmark document. If institutional bottlenecks are resolved, the state economy will truly become a "steel fist", leading Vietnam\'s economy to become a developed nation, realizing the nation\'s aspiration for prosperity.'
+  }
+};

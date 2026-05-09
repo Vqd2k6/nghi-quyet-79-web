@@ -15,9 +15,10 @@ import {
   Clock,
   MapPin,
   X,
-  FileText
+  FileText,
+  AlertTriangle
 } from 'lucide-react';
-import { MINDMAP_DATA, NEWSPAPER_CONFIG } from './constants';
+import { MINDMAP_DATA, NEWSPAPER_CONFIG, CASE_STUDIES_DATA, EVALUATION_DATA } from './constants';
 import { Language, MindmapNode } from './types';
 
 const Modal = ({ node, lang, isOpen, onClose }: { node: MindmapNode | null, lang: Language, isOpen: boolean, onClose: () => void }) => {
@@ -284,6 +285,85 @@ const BottomGridItem = ({ node, lang, onReadMore }: { node: MindmapNode, lang: L
   </div>
 );
 
+const CaseStudiesSection = ({ lang }: { lang: Language }) => (
+  <div className="mt-16 pt-12 border-t-4 border-black">
+    <div className="flex items-center gap-2 text-news-red text-sm font-black uppercase tracking-widest mb-8">
+      <Globe size={16} /> {lang === 'vi' ? 'VÍ DỤ THỰC TIỄN' : 'CASE STUDIES'}
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {CASE_STUDIES_DATA.map((study) => (
+        <div key={study.id} className="border-2 border-black p-6 hover:bg-black hover:text-white transition-colors group cursor-pointer shadow-md">
+          <div className="halftone h-48 w-full overflow-hidden mb-6 border border-black group-hover:border-white">
+            <img src={study.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" alt={study.name} />
+          </div>
+          <h4 className="text-4xl font-black mb-2 tracking-tighter">{study.name}</h4>
+          <p className="text-xs font-bold uppercase mb-4 opacity-70 h-8 line-clamp-2">{study.fullName[lang]}</p>
+          <div className="space-y-4 text-sm border-t border-black/20 group-hover:border-white/20 pt-4">
+            <p><strong>{lang === 'vi' ? 'Hoạt động:' : 'Activity:'}</strong> {study.activity[lang]}</p>
+            <p><strong>{lang === 'vi' ? 'Vai trò:' : 'Role:'}</strong> {study.role[lang]}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+const EvaluationSection = ({ lang }: { lang: Language }) => (
+  <div className="mt-16 border-4 border-black flex flex-col md:flex-row shadow-2xl">
+    {/* Positives */}
+    <div className="flex-1 p-8 md:p-12 bg-white md:border-r-4 border-black">
+      <div className="flex items-center gap-2 text-green-700 text-sm font-black uppercase tracking-widest mb-8">
+        <TrendingUp size={20} /> {EVALUATION_DATA.positives.title[lang]}
+      </div>
+      <div className="space-y-8">
+        {EVALUATION_DATA.positives.items.map((item, i) => (
+          <div key={i}>
+            <h5 className="font-black text-lg mb-2 uppercase border-b border-black/10 pb-2">{item.aspect[lang]}</h5>
+            <p className="text-black/80 leading-relaxed italic">{item.desc[lang]}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    {/* Challenges & Solutions */}
+    <div className="flex-1 p-8 md:p-12 bg-stone-100">
+      <div className="flex items-center gap-2 text-news-red text-sm font-black uppercase tracking-widest mb-8">
+        <AlertTriangle size={20} /> {lang === 'vi' ? 'HẠN CHẾ & GIẢI PHÁP' : 'CHALLENGES & SOLUTIONS'}
+      </div>
+      
+      <div className="mb-8 pb-8 border-b-2 border-black/20">
+        <h4 className="font-black text-xl mb-6">{EVALUATION_DATA.challenges.title[lang]}</h4>
+        <div className="space-y-4">
+          {EVALUATION_DATA.challenges.items.map((item, i) => (
+            <div key={i} className="flex gap-4">
+              <span className="text-news-red mt-1">●</span>
+              <div>
+                <strong className="block text-sm uppercase">{item.aspect[lang]}</strong>
+                <span className="text-sm text-black/70 block mt-1">{item.desc[lang]}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h4 className="font-black text-xl mb-6 text-green-800">{EVALUATION_DATA.solutions.title[lang]}</h4>
+        <div className="space-y-4">
+          {EVALUATION_DATA.solutions.items.map((item, i) => (
+            <div key={i} className="flex gap-4 bg-white p-4 border border-black/10 shadow-sm">
+              <Zap size={16} className="text-yellow-500 shrink-0 mt-1" />
+              <div>
+                <strong className="block text-sm uppercase">{item.aspect[lang]}</strong>
+                <span className="text-sm text-black/70 block mt-1">{item.desc[lang]}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 export default function App() {
   const [lang, setLang] = useState<Language>('vi');
   const [selectedNode, setSelectedNode] = useState<MindmapNode | null>(null);
@@ -355,13 +435,16 @@ export default function App() {
               </div>
               <Zap size={64} className="mb-6 text-news-red animate-pulse" />
               <h4 className="text-4xl font-black mb-4 uppercase leading-none tracking-tighter">
-                {lang === 'vi' ? 'QUẢ ĐẤM THÉP 2045' : 'STEEL FIST 2045'}
+                {lang === 'vi' ? 'KẾT LUẬN' : 'CONCLUSION'}
               </h4>
-              <p className="text-lg font-serif italic text-white/80 border-t border-white/20 pt-4">
-                "{lang === 'vi' ? 'Kinh tế nhà nước là lực lượng nòng cốt dẫn dắt sự thịnh vượng của quốc gia.' : 'The state economy is the core force leading national prosperity.'}"
+              <p className="text-sm md:text-base font-serif italic text-white/90 border-t border-white/20 pt-4 text-justify">
+                "{EVALUATION_DATA.conclusion[lang]}"
               </p>
             </div>
         </div>
+
+        <CaseStudiesSection lang={lang} />
+        <EvaluationSection lang={lang} />
       </main>
 
       <footer className="max-w-7xl mx-auto px-4 md:px-8 border-t-8 border-black pt-8 mt-24 pb-12 bg-white/60">
